@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Click Event</title>
+  <link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+
+<body>
+
+  <section id="click-event">
+    <div class="box-btn">
+      <button data-color="red" class="box">Red</button>
+      <button data-color="green" class="box">Green</button>
+      <button data-color="blue" class="box">Blue</button>
+      <button data-color="pink" class="box">Pink</button>
+    </div>
+
+    <div class="bg-color-box"> </div>
+
+  </section>
+
+  <section id="mouseover">
+    <div class="img-box-btn">
+      <button id="img1" class="img-box"><img src="img/img1.jpg" alt=""></button>
+      <button id="img2" class="img-box"><img src="img/img2.jpg" alt=""></button>
+      <button id="img3" class="img-box"><img src="img/img3.jpg" alt=""></button>
+      <button id="img4" class="img-box"><img src="img/img4.jpg" alt=""></button>
+    </div>
+    <div class="bg-img-box active"></div>
+  </section>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+
+  <!--  <script src="js/jquery.min.js"></script>-->
+  <script>
+    $(document).ready(function() {
+
+      //setting bg color of each box using data-attribute
+      $(".box").each(function() {
+        $(this).css({
+          'background': $(this).attr('data-color')
+        });
+      });
+
+      //change bg of big box when click on small box
+      $(".box").click(function() {
+        $("button").removeClass("active");
+        $(this).addClass("active");
+        var c = $(this).attr('data-color');
+        $(".bg-color-box").css({
+          'background': c
+        });
+      });
+
+      //change image of big box when hover on small box
+      $(".img-box img").mouseover(function() {
+        $(".bg-img-box").css({
+          'background-image': "url(" + $(this).attr('src') + ")"
+        })
+      });
+
+    });
+
+
+    //    $(document).ready(function() {
+    //      $(".box").click(function() {
+    //        $("button").removeClass("active");
+    //        $(this).addClass("active");
+    //        $(".bg-color-box").attr('color');
+    //      });
+    //    });
+
+    //    $(document).ready(function() {
+    //      $(".green").click(function() {
+    //        $("button").removeClass("active");
+    //        $(this).addClass("active");
+    //        $('.bg-color-box').attr({
+    //          'style' : 'background-color:green'
+    //        });
+    //      });
+    //    });
+
+  </script>
+
+
+
+</body>
+
+</html>

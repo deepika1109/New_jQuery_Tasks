@@ -1,0 +1,60 @@
+<html>
+
+   <head>
+      <title>jQuery scrollTop() method</title>
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		
+      <script>
+         $(document).ready(function(){
+            $("div.demo").scrollTop( 200 );
+				
+            $("div.demo").mousemove(function () {
+               var top = $("div.demo").scrollTop();
+               $("#result").html("top offset: <span>" + top + "</span>.");
+            });
+				
+         });
+      </script>
+		
+      <style>
+         div.demo {
+            background:#CCCCCC none repeat scroll 0 0; 
+            border:3px 
+            solid #666666;
+            margin:5px;
+            padding:5px;
+            position:relative;
+            width:300px; 
+            height:100px; 
+            overflow:auto;
+         }
+				
+         div.result {
+            margin:10px; 
+            width:100px; 
+            height:100px; 
+            margin:5px; 
+            float:left; 
+            background-color:red;
+         }
+				
+         p { 
+            margin:10px; 
+            padding:5px; 
+            border:2px solid #666; 
+            width:1000px; 
+            height:1000px;
+         }
+      </style>
+		
+   </head>
+	
+   <body>
+	
+      <div class = "demo"><p>Hello</p></div>
+      <span>Scroll vertical button to see the result:</span>
+      <div class = "result"><span id = "result"></span></div>
+		
+   </body>
+	
+</html>
