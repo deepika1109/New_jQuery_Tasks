@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>position sticky</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		body{
+			font-family: Open sans,sans-serif;
+		}
+
+		.class_01{
+				position: relative;
+				/*overflow: hidden;*/
+				height: 100vh;
+
+		}
+
+		.class_02{
+				height: 100vh;
+				background-color: #A32B46;
+		}
+
+		.class_03{
+				height: 100vh;
+				background-color: #CF0061;
+		}
+
+		 .header{
+			width: 100%;
+			background-color: #9b59b6;
+			text-align: center;
+			transition: all ease 0.5s;
+		}
+		.header ul li{
+			display: inline-block;
+		}
+
+	 .header ul li a{
+			display: block;
+			color:#fff;
+			text-decoration: none;
+			padding: 25px;
+			font-weight: bold;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			transition: all ease 0.5s;
+		}
+
+		 .header ul li a:hover{
+			background-color: #330042;
+		}
+
+		.sticky{
+			position: sticky;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
+
+	/*	.header.sticky ul li a{
+			padding: 10px 20px;
+			font-size: 14px;	
+		}*/
+
+		section{
+			background-color: #D133FF;
+			/*height: 100vh;*/
+		}
+
+	</style>
+</head>
+<body>
+
+	<section class="class_02"></section>
+
+	<section class="class_01">
+		
+			<div class="header">
+		
+		<ul>
+			<li><a href="">home</a></li>
+			<li><a href="">about</a></li>
+			<li><a href="">service</a></li>
+			<li><a href="">contact</a></li>
+			<li><a href="">blog</a></li>
+		</ul>
+
+	</div>
+
+	</section>
+
+<section class="class_03"></section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+
+		$(window).scroll(function(){
+
+			if($(window).scrollTop() > 0){
+				$("section .header").addClass("sticky");
+			}
+			else{
+				$("section .header").removeClass("sticky");
+			}
+
+		});
+
+	});
+
+</script>
+</body>
+</html>
