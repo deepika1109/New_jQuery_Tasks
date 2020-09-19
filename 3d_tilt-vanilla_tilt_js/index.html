@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D tilt using Vanilla tilt js</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+  <div class="main">
+    <div class="box" data-tilt data-tilt-startX="20" data-tilt-startY="-20" data-tilt-scale="1.1">
+      <img src="images/nature.jpg" alt="">
+      <p>Nature</p>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="js/vanilla-tilt.js"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelector(".box"), {
+      max: 25,
+      speed: 400,
+    });
+
+    
+    //It also supports NodeList
+    VanillaTilt.init(document.querySelectorAll(".box"));
+  </script>
+</body></html>
