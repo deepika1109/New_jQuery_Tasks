@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+  <!-- css -->
+  <link rel="stylesheet" type="text/css" href="css/parallax-style.css">
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- 12 Cool CSS Loading Animation You must see!!! -->
+  <!-- https://www.youtube.com/watch?v=DeOcGZlbxXo -->
+  <!-- Chanal name -->
+  <!-- BookMark -->
+
+<section class="zoom">
+  <img src="images/mountain1.png" id="layer1">
+  <img src="images/mountain2.png" id="layer2">
+  <img src="images/text.png" id="text">
+
+</section>
+
+<section class="content">
+  
+  <h1>Parallax Scrolling Effects</h1>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+</section>
+
+<script type="text/javascript">
+  var layer1 = document.getElementById('layer1')
+  scroll = window.pageYOffset;
+  document.addEventListener('scroll', function (e){
+    var offset = window.pageYOffset;
+    scroll = offset;
+    layer1.style.width = (100 + scroll/5) + '%';
+  });
+
+  var layer2 = document.getElementById('layer2')
+  scroll = window.pageYOffset;
+  document.addEventListener('scroll', function (e){
+    var offset = window.pageYOffset;
+    scroll = offset;
+    layer2.style.width = (100 + scroll/5) + '%';
+    layer2.style.left =  scroll/50 + '%';
+  });
+
+  var text = document.getElementById('text')
+  scroll = window.pageYOffset;
+  document.addEventListener('scroll', function (e){
+    var offset = window.pageYOffset;
+    scroll = offset;
+    layer2.style.width = (100 + scroll/5) + '%';
+    text.style.top = - scroll/20 + '%';
+  });
+
+</script>
+
+<!-- video link -->
+<!-- https://www.youtube.com/watch?v=I3gv-GRlYvs -->
+
+</body>
+</html>
