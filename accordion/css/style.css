@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url(../blue.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+
+h1 {
+  text-align: center;
+  font-size: 40px; }
+
+.container {
+  width: 60%;
+  margin: 0 auto; }
+  .container h2 {
+    background-color: lightblue;
+    padding: 20px;
+    margin: 0;
+    border-bottom: 2px solid #fff;
+    position: relative; }
+    .container h2::after {
+      content: '+';
+      font-size: 30px;
+      font-weight: 900;
+      position: absolute;
+      right: 20px; }
+  .container .contain {
+    background-color: #fff;
+    display: none; }
+    .container .contain .contain-inner {
+      padding: 20px; }
+      .container .contain .contain-inner p {
+        line-height: 1.5; }
+
+/*# sourceMappingURL=style.css.map */
