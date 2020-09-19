@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+#sidebar {
+//  .active {
+//    background-color: #fff;
+//  }
+  .header {
+    background-color: #400080;
+    //    display: inline;
+    .menuicon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 50px;
+      height: 50px;
+      background-color: #400080;
+      border: none;
+      outline: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-sizing: border-box;
+      span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin: 4px 0;
+        background-color: #ff4a83;
+        transition: .8s;
+        //      &:before {
+        //        content: '';
+        //        width: 100%;
+        //        height: 3px;
+        //        margin: 4px 0;
+        //        background-color: #400080;
+        //      }
+        //
+        //      &:after {
+        //        content: '';
+        //        width: 100%;
+        //        height: 3px;
+        //        margin: 4px 0;
+        //        background-color: #400080;
+        //      }
+      }
+      &.active {
+        span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        margin: -2px 0;
+        background-color: #ff4a83;
+        transition: .8s;  
+          &:nth-child(1){
+            transform: rotate(45deg);
+          }
+          
+          &:nth-child(3){
+            transform: rotate(-55deg);
+          }
+          
+          &:nth-child(2){
+            display: none;
+          }
+      }
+        
+        
+      }
+    }
+    .logo {
+      //      text-align: center;
+      margin-left: 60px;
+      z-index: 1;
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+  .sidebarmenu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #400080;
+    transition: .9s;
+    z-index: -1;
+    ul {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      li {
+        list-style-type: none;
+        padding: 15px 0;
+        a {
+          text-decoration: none;
+          color: #ff4a83;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .active {
+    left: 0;
+  }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Sphere | CSS object-fit cover</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+  <section>
+    <video src="video/bg.mp4" autoplay muted loop></video>
+    <div class="sphere">
+      <video src="video/bg.mp4" autoplay muted loop></video>
+    </div>
+  </section>
+  
+  <script type="text/javascript" src="vanilla-tilt.js"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelector(".sphere"), {
+      max: 25,
+      speed: 400,
+    });
+
+    
+    //It also supports NodeList
+    VanillaTilt.init(document.querySelectorAll(".sphere"));
+  </script>
+
+</body>
+
+</html>

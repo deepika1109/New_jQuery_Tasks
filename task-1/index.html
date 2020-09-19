@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="style/style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <section id="sidebar">
+    <div class="header">
+      <! -- header -->
+      <button class="menuicon">
+        <! -- menuicon -->
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="logo">
+        <! -- logo -->
+        <img src="bakary.png" alt="">
+      </div>
+    </div>
+
+    <div class="sidebarmenu">
+      <ul>
+        <li class="sidebarbtn"><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">PRODUCTS</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <script>
+    
+    $(document).ready(function(){
+      $(".menuicon").click(function(){
+        $(".sidebarmenu").toggleClass("active");
+        $(".menuicon").toggleClass("active");
+        
+      });
+      
+    });
+    
+    
+
+  </script>
+</body>
+
+</html>
