@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>walking animation</title>
+
+
+
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+		}
+
+		.wrapper{
+			background-image: url(walking_man.png);
+			height: 550px; 
+			width: calc(1440px / 5);
+			animation: walk 1s steps(6) infinite;
+		}
+
+		@keyframes walk{
+			from{
+				background-position: 0;
+			}
+			to{
+				background-position: -1440px;
+			}
+		}
+
+		.wrapper_1{
+			background-image: url(unnamed.jpg);
+			height: 290px; 
+			width: calc(1440px / 10);
+			animation: wal 2s steps(6) infinite;
+		}
+
+		@keyframes wal{
+			from{
+				background-position: 0;
+			}
+			to{
+				background-position: -1440px;
+			}
+		}
+
+		.wrapper_2{
+			background-image: url(images.png);
+			height: 90px; 
+			width: calc(1440px / 10);
+			animation: image 2s steps(6) infinite;
+		}
+
+		@keyframes image{
+			from{
+				background-position: 0;
+			}
+			to{
+				background-position: -1440px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+	
+	</div>
+<br><br><br><br>
+	<div class="wrapper_1">
+		
+	</div>
+<br><br><br><br>
+	<div class="wrapper_2">
+		
+	</div>
+<br><br><br><br>
+</body>
+</html>
