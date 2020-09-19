@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Suez+One&display=swap");
+* {
+  font-family: 'Suez One', serif;
+  list-style: none; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+#container .tabs ul {
+  display: flex;
+  justify-content: center; }
+  #container .tabs ul li {
+    padding: 20px;
+    border: 2px solid #000;
+    margin: 10px;
+    cursor: pointer; }
+    #container .tabs ul li.active {
+      background-color: dimgray; }
+#container .contain {
+  width: 1200px;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=style.css.map */

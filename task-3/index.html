@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <section>
+
+    <div id="container">
+      <div class="tabs">
+        <ul>
+          <li data-list=".tab_1" class="active">Tab 1</li>
+          <li data-list=".tab_2">Tab 2</li>
+          <li data-list=".tab_3">Tab 3</li>
+          <li data-list=".tab_4">Tab 4</li>
+        </ul>
+      </div>
+
+      <div class="contain">
+        <div class="tab-contain tab_1">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="tab-contain tab_2">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+        <div class="tab-contain tab_3">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+        <div class="tab-contain tab_4">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!--refer below video-->
+    <!--https://www.youtube.com/watch?v=DI-eK-3j52g-->
+
+  </section>
+
+  <div id="box" style="padding:30px; background-color: azure; cursor: pointer;border: 14px solid #000;">
+    <h1>heading</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni doloremque ipsa enim fuga officiis, aut voluptates itaque unde, sint excepturi officia atque architecto quia veritatis nostrum, optio tempore ipsum laudantium!</p>
+
+  </div>
+  <br>
+  <button class="clone">clone</button>
+  <button class="replace">Replace</button>
+  <button class="replaceall">ReplaceAll</button>
+  <button class="wrap">wrap</button>
+  <button class="unwrap">Unwrap</button>
+  <button class="height">Height</button>
+  <button class="width">Width</button>
+  <br><br>
+  <div id="box1" style="padding:30px; background-color: cornflowerblue;">
+
+  </div>
+
+  <div class="grid-1">
+    <h1>Deepika</h1>
+    <button class="clone-1">Clone</button>
+  </div>
+
+  <div class="grid-2">
+    <h2></h2>
+  </div>
+
+    <div id="div1" style="height: 1000px; width 100px">
+        Test
+    </div>
+    <br/>
+    <div id="div2" style="height: 1000px; width 100px">
+        Test 2
+    </div>
+    <button id="A">Click me</button>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function() {
+      $(".contain .tab-contain").hide();
+      $(".contain .tab-contain:first-child").show();
+
+      $("ul li").click(function() {
+        $("ul li").removeClass('active');
+        $(this).addClass('active');
+        
+        $(".contain .tab-contain").hide();
+        $($(this).attr('data-list')).show();
+      });
+
+      $('.clone').click(function() {
+        $('#box h1').clone().appendTo("#box1").replaceWith('Deepika');
+      });
+
+      $('.replace').click(function() {
+        $('#box h1').replaceWith('Deepika');
+      });
+
+      $('.replaceall').click(function() {
+        $('<h1>Deepika</h1>').replaceAll('#box');
+      });
+
+      $('.wrap').click(function() {
+        $('#box p').wrap('<h3></h3>');
+      });
+
+      $('.unwrap').click(function() {
+        $('#box p').unwrap();
+      });
+
+      $('.height').click(function() {
+        console.log("height :" + $('#box').height());
+        console.log("InnerHeight :" + $('#box').innerHeight());
+        console.log("OuterHeight :" + $('#box').outerHeight());
+        console.log("OuterHeight(true) :" + $('#box').outerHeight(true));
+      });
+
+      $('.width').click(function() {
+        console.log("width :" + $('#box').width());
+        console.log("InnerWidth :" + $('#box').innerWidth());
+        console.log("OuterWidth :" + $('#box').outerWidth());
+        console.log("OuterWidth(true) :" + $('#box').outerWidth(true));
+      });
+
+      $(".clone-1").click(function() {
+        $('.grid-1 h1').clone(".grid-2 h2");
+
+      });
+
+    });
+
+    $(document).ready(function (){
+            $("#A").click(function (){
+                $('html, body').animate({
+                    scrollTop: $("#div1").offset().top
+                }, 2000);
+            });
+        });
+
+  </script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- $(document).ready(function() {
+
+            $(".color_box").click(function() {
+                //fetching data color of the clicked box
+                var getColor = $(this).attr('data-color');
+
+                //setting the border of clicked box
+                $(".color_box").css({
+                    border: '1px solid #000'
+                })
+                $(this).css({
+                    border: '2px solid ' + getColor
+                });
+
+                $(".big_box").css({
+                    backgroundColor: getColor
+                });
+
+            });
+ -->
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Jquery Example</title>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <style type="text/css">
+        .col {
+            display: flex;
+        }
+
+        .color_box {
+            width: 100px;
+            height: 100px;
+            background: #fff;
+            border: 1px solid #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+
+        .img_box {
+            width: 100px;
+            height: 100px;
+            margin: 20px 0;
+            cursor: pointer;
+        }
+
+        .red.active {
+            border: 3px solid red;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .box_section {
+            margin: 20px;
+        }
+
+        .big_box_section {
+            margin: 20px;
+        }
+
+        .big_box {
+            width: 500px;
+            height: 460px;
+            background: red;
+        }
+
+        .img_big_box {
+            width: 500px;
+            height: 460px;
+            background: url('images/img_1.jpg');
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="color_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col">
+                    <div class="color-box_section">
+                        <div class="color_box active red" data-color="red">
+                            <p>Red</p>
+                        </div>
+                        <div class="color_box green" data-color="green">
+                            <p>Green</p>
+                        </div>
+                        <div class="color_box blue" data-color="blue">
+                            <p>Blue</p>
+                        </div>
+                        <div class="color_box pink" data-color="pink">
+                            <p>Pink</p>
+                        </div>
+                    </div>
+                    <div class="box_section">
+                        <div class="big_box">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="image_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col">
+                    <div class="img_box_section">
+                        <div class="img_box active img_1">
+                            <img src="images\img_1.jpg" class="img-responsive">
+                        </div>
+                        <div class="img_box img_2">
+                            <img src="images\img_2.jpg" class="img-responsive">
+                        </div>
+                        <div class="img_box img_3">
+                            <img src="images\img_3.jpg" class="img-responsive">
+                        </div>
+                        <div class="img_box img_4">
+                            <img src="images\img_4.jpg" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="big_box_section">
+                        <div class="img_big_box">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        $(document).ready(function() {
+
+            $(".color_box").click(function() {
+                //fetching data color of the clicked box
+                var getColor = $(this).attr('data-color');
+
+                //setting the border of clicked box
+                $(".color_box").css({
+                    border: '1px solid #000'
+                })
+                $(this).css({
+                    border: '2px solid ' + getColor
+                });
+
+                $(".big_box").css({
+                    backgroundColor: getColor
+                });
+
+            });
+
+            $(".img_box").mouseover(function() {
+                $('.img_box').removeClass("active");
+                $(this).addClass("active");
+
+                $(".img_1").mouseover(function() {
+                    $(".img_big_box").attr("style", "background:url('images/img_1.jpg');");
+                });
+                $(".img_2").mouseover(function() {
+                    $(".img_big_box").attr("style", "background:url('images/img_2.jpg');");
+                });
+                $(".img_3").mouseover(function() {
+                    $(".img_big_box").attr("style", "background:url('images/img_3.jpg');");
+                });
+                $(".img_4").mouseover(function() {
+                    $(".img_big_box").attr("style", "background:url('images/img_4.jpg');");
+                });
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html> -->
