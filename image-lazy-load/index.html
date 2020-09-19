@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Image Lazy Load</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+
+  <section class="image-list">
+    <img data-lazy-src="img/01.jpg">
+    <img data-lazy-src="img/06.jpg">
+    <img data-lazy-src="img/09.jpg">
+    <img data-lazy-src="img/07.jpg">
+    <img data-lazy-src="img/11.jpg">
+    <img data-lazy-src="img/02.jpg">
+    <img data-lazy-src="img/05.jpg">
+    <img data-lazy-src="img/03.jpg">
+    <img data-lazy-src="img/10.jpg">
+    <img data-lazy-src="img/12.jpg">
+    <img data-lazy-src="img/04.jpg">
+    <img data-lazy-src="img/08.jpg">
+    <img data-lazy-src="img/14.jpg">
+    <img data-lazy-src="img/05.jpg">
+    <img data-lazy-src="img/13.jpg">
+    <img data-lazy-src="img/01.jpg">
+    <img data-lazy-src="img/01.jpg">
+    <img data-lazy-src="img/06.jpg">
+    <img data-lazy-src="img/09.jpg">
+    <img data-lazy-src="img/07.jpg">
+    <img data-lazy-src="img/11.jpg">
+    <img data-lazy-src="img/02.jpg">
+    <img data-lazy-src="img/05.jpg">
+    <img data-lazy-src="img/03.jpg">
+    <img data-lazy-src="img/10.jpg">
+    <img data-lazy-src="img/12.jpg">
+    <img data-lazy-src="img/04.jpg">
+    <img data-lazy-src="img/08.jpg">
+    <img data-lazy-src="img/14.jpg">
+    <img data-lazy-src="img/05.jpg">
+    <img data-lazy-src="img/13.jpg">
+    <img data-lazy-src="img/01.jpg">
+    <img data-lazy-src="img/01.jpg">
+    <img data-lazy-src="img/06.jpg">
+    <img data-lazy-src="img/09.jpg">
+    <img data-lazy-src="img/07.jpg">
+    <img data-lazy-src="img/11.jpg">
+    <img data-lazy-src="img/02.jpg">
+    <img data-lazy-src="img/05.jpg">
+    <img data-lazy-src="img/03.jpg">
+    <img data-lazy-src="img/10.jpg">
+    <img data-lazy-src="img/12.jpg">
+    <img data-lazy-src="img/04.jpg">
+    <img data-lazy-src="img/08.jpg">
+    <img data-lazy-src="img/14.jpg">
+    <img data-lazy-src="img/05.jpg">
+    <img data-lazy-src="img/13.jpg">
+    <img data-lazy-src="img/01.jpg">
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    var winH = $(window).outerHeight();
+
+    $(window).on('scroll', function(e) {
+      var scrollTopPos = $(window).scrollTop();
+
+      $('img[data-lazy-src]').each(function() {
+        var getOffsetTop = $(this).offset().top;
+        if (getOffsetTop < (scrollTopPos + (winH * 2))) {
+          $(this).attr('src', $(this).attr('data-lazy-src'));
+        }
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>
