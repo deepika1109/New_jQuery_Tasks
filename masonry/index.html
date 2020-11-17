@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Masonry</title>
+
+	<style type="text/css">
+	.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+		.grid{
+			margin: 0 auto;
+		}
+		.grid-item { width: 33.33%; padding: 10px;box-sizing: border-box;}
+		.grid-item img{width: 100%;display: block;}
+/*.grid-item--width2 { width: 400px; }*/
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		
+		<div class="grid">
+  <div class="grid-item"><img src="01.jpg"></div>
+
+  <div class="grid-item"><img src="02.jpg"></div>
+
+  <div class="grid-item"><img src="03.jpg"></div>
+
+  <div class="grid-item"><img src="04.jpg"></div>
+
+  <div class="grid-item"><img src="05.jpg"></div>
+
+  <div class="grid-item"><img src="06.jpg"></div>
+
+  <div class="grid-item"><img src="07.jpg"></div>
+
+  <div class="grid-item"><img src="08.jpg"></div>
+
+  <div class="grid-item"><img src="09.jpg"></div>
+
+  <div class="grid-item"><img src="10.jpg"></div>
+
+  <div class="grid-item"><img src="11.jpg"></div>
+
+  <div class="grid-item"><img src="12.jpg"></div>
+
+  <div class="grid-item"><img src="13.jpg"></div>
+
+  <div class="grid-item"><img src="14.jpg"></div>
+</div>
+
+	</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+<script type="text/javascript">
+	
+var elem = document.querySelector('.grid');
+var msnry = new Masonry( elem, {
+  // options
+  itemSelector: '.grid-item',
+  // gutter:15,
+  // columnWidth: 200
+});
+
+
+</script>
+</body>
+</html>
