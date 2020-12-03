@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+
+  <style>
+    .tab_area .tab_button {
+      display: flex;
+    }
+
+    .tab_area .tab_button .tab_button_item {
+      border: 1px solid transparent;
+      padding: 10px;
+    }
+
+    .tab_area .tab_button .tab_button_item.active {
+      border: 1px solid #333;
+    }
+
+    .tab_area .tab_content .tab_content_item {
+      display: none;
+    }
+
+    .tab_area .tab_content .tab_content_item.active {
+      display: block;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <div class="tab_area">
+    <div class="tab_button">
+      <div class="tab_button_item active" data-category=".cat1">a</div>
+      <div class="tab_button_item" data-category=".cat2">b</div>
+      <div class="tab_button_item" data-category=".cat3">c</div>
+    </div>
+    <div class="tab_content">
+      <div class="tab_content_item active cat1">a</div>
+      <div class="tab_content_item cat2">b</div>
+      <div class="tab_content_item cat3">c</div>
+    </div>
+  </div>
+
+  <div class="tab_area">
+    <div class="tab_button">
+      <div class="tab_button_item active" data-category=".cat1">a</div>
+      <div class="tab_button_item" data-category=".cat2">b</div>
+      <div class="tab_button_item" data-category=".cat3">c</div>
+    </div>
+    <div class="tab_content">
+      <div class="tab_content_item active cat1">a</div>
+      <div class="tab_content_item cat2">b</div>
+      <div class="tab_content_item cat3">c</div>
+    </div>
+  </div>
+
+  <div class="tab_area">
+    <div class="tab_button">
+      <div class="tab_button_item active" data-category=".cat1">a</div>
+      <div class="tab_button_item" data-category=".cat2">b</div>
+      <div class="tab_button_item" data-category=".cat3">c</div>
+    </div>
+    <div class="tab_content">
+      <div class="tab_content_item active cat1">a</div>
+      <div class="tab_content_item cat2">b</div>
+      <div class="tab_content_item cat3">c</div>
+    </div>
+  </div>
+
+  <div class="tab_area">
+    <div class="tab_button">
+      <div class="tab_button_item active" data-category=".cat1">a</div>
+      <div class="tab_button_item" data-category=".cat2">b</div>
+      <div class="tab_button_item" data-category=".cat3">c</div>
+    </div>
+    <div class="tab_content">
+      <div class="tab_content_item active cat1">a</div>
+      <div class="tab_content_item cat2">b</div>
+      <div class="tab_content_item cat3">c</div>
+    </div>
+  </div>
+  <div class="tab_area">
+    <div class="tab_button">
+      <div class="tab_button_item active" data-category=".cat1">a</div>
+      <div class="tab_button_item" data-category=".cat2">b</div>
+      <div class="tab_button_item" data-category=".cat3">c</div>
+    </div>
+    <div class="tab_content">
+      <div class="tab_content_item active cat1">a</div>
+      <div class="tab_content_item cat2">b</div>
+      <div class="tab_content_item cat3">c</div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.tab_button_item').on('click', function() {
+
+        var getParent = $(this).closest('.tab_area');
+        var getCategory = $(this).attr('data-category');
+
+        getParent.find('.tab_button_item').removeClass('active');
+        $(this).addClass('active');
+
+        getParent.find('.tab_content_item').removeClass('active');
+        getParent.find(getCategory).addClass('active');
+
+      });
+    })
+
+  </script>
+</body>
+
+</html>
