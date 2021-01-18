@@ -1,0 +1,126 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Welly | Product</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<style type="text/css">
+  
+#faq_page .questions_answer_section .questions_answer .accordion {
+  border-bottom: 1px solid #1A3C34; }
+  #faq_page .questions_answer_section .questions_answer .accordion .header4 {
+    color: #F41D00;
+    position: relative; }
+    #faq_page .questions_answer_section .questions_answer .accordion .header4::after {
+      content: "\02795";
+      font-size: 10px;
+      font-weight: 900;
+      position: absolute;
+      right: 0px;
+      color: #fff;
+      background-color: #000;
+      padding: 4px 4px;
+      border-radius: 18px; }
+    #faq_page .questions_answer_section .questions_answer .accordion .header4.active_bg {
+      background-color: #fff; }
+      #faq_page .questions_answer_section .questions_answer .accordion .header4.active_bg::after {
+        content: '\2796';
+        font-size: 10px;
+        font-weight: 400;
+        position: absolute;
+        right: 0px;
+        padding: 4px 4px; }
+  #faq_page .questions_answer_section .questions_answer .accordion .contain {
+    background-color: #fff;
+    display: none; }
+    #faq_page .questions_answer_section .questions_answer .accordion .contain.active_co {
+      display: block; }
+    #faq_page .questions_answer_section .questions_answer .accordion .contain .body2 {
+      padding: 0 0 20px;
+      margin: 0; }
+
+</style>
+
+</head>
+
+<body>
+  <main id="faq_page">
+    <section class="questions_answer_section">
+      <div class="container">
+        <div class="questions_answer">
+
+          <!--start accordion -->
+          <div class="accordion">
+            <h4 class="header4 active_bg">What is lorem ipsum dolar sit?</h4>
+            <div class="contain active_co">
+              <p class="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed blandit libero volutpat sed cras ornare arcu dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Urna condimentum mattis pellentesque id nibh tortor</p>
+            </div>
+          </div>
+
+          <!--start accordion -->
+          <div class="accordion">
+            <h4 class="header4">What is lorem ipsum dolar sit?</h4>
+            <div class="contain">
+              <p class="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed blandit libero volutpat sed cras ornare arcu dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Urna condimentum mattis pellentesque id nibh tortor</p>
+            </div>
+          </div>
+
+          <!--start accordion -->
+          <div class="accordion">
+            <h4 class="header4">What is lorem ipsum dolar sit?</h4>
+            <div class="contain">
+              <p class="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed blandit libero volutpat sed cras ornare arcu dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Urna condimentum mattis pellentesque id nibh tortor</p>
+            </div>
+          </div>
+
+          <!--start accordion -->
+          <div class="accordion">
+            <h4 class="header4">What is lorem ipsum dolar sit?</h4>
+            <div class="contain">
+              <p class="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed blandit libero volutpat sed cras ornare arcu dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Urna condimentum mattis pellentesque id nibh tortor</p>
+            </div>
+          </div>
+
+          <!--start accordion -->
+          <div class="accordion">
+            <h4 class="header4">What is lorem ipsum dolar sit?</h4>
+            <div class="contain">
+              <p class="body2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed blandit libero volutpat sed cras ornare arcu dui. Pellentesque pulvinar pellentesque habitant morbi tristique senectus et. Urna condimentum mattis pellentesque id nibh tortor</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/slick.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $(".accordion .header4").click(function() {
+        var isActive = $(this).hasClass('active_bg');
+        var getParent = $(this).parents('.questions_answer');
+
+        if (isActive) {
+          getParent.find('.contain').slideUp();
+          $(this).removeClass('active_bg');
+        } else {
+          getParent.find('.contain').slideUp();
+          $(this).next(".contain").slideDown();
+          $(".accordion .header4").removeClass('active_bg');
+          $(this).addClass('active_bg');
+        }
+      });
+    });
+
+  </script>
+</body>
+
+</html>
