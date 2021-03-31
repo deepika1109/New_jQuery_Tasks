@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Accordion using only HTML CSS</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Responsive Accordion Menu | CodingNepal</title> -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<style type="text/css">
+/*body{
+	height: 100vh;
+}
+
+	.container-fluid, .container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.container {
+  margin: auto; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+
+.parent-tab{
+  margin: 20px 0;
+}
+
+.parent-tab label{
+	background-color: #007bff;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 3px;
+	position: relative;
+	z-index: 99;
+}
+
+.parent-tab label span{
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	text-shadow: 0 -1px 1px #0056b3;
+}
+
+.parent-tab .content{
+	max-height: 0;
+	overflow: hidden;
+}
+
+.parent-tab .content p{
+	font-size: 16px;
+	padding: 15px 20px;
+}*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+::selection{
+  background: rgb(0,123,255,0.3);
+}
+/*.container{
+  max-width: 600px;
+  padding: 0 20px;
+}*/
+
+.container-fluid, .container {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.container {
+  margin: auto; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .container {
+      width: 750px; } }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+      width: 970px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px; } }
+
+.container .parent-tab,
+.container .child-tab{
+  margin-bottom: 8px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.18);
+}
+.container .parent-tab label,
+.container .child-tab label{
+  background: #007bff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  border-radius: 3px;
+  position: relative;
+  z-index: 99;
+  transition: all 0.3s ease;
+}
+.container .parent-tab label:hover{
+  background: #006fe6;
+}
+.parent-tab input:checked ~ label,
+.child-tab input:checked ~ label{
+  border-radius: 3px 3px 0 0;
+  background: #006fe6;
+}
+.container label span{
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-shadow: 0 -1px 1px #0056b3;
+}
+.container .child-tab label span{
+  font-size: 17px;
+}
+.parent-tab label .icon{
+  position: relative;
+  height: 30px;
+  width: 30px;
+  font-size: 15px;
+  color: #007bff;
+  display: block;
+  background: #fff;
+  border-radius: 50%;
+  text-shadow: 0 -1px 1px #0056b3;
+}
+.container .child-tab label .icon{
+  height: 27px;
+  width: 27px;
+}
+.parent-tab label .icon i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.parent-tab input:checked ~ label .icon i:before,
+.child-tab input:checked ~ label .icon i:before{
+  content: '\f068';
+}
+.container .parent-tab .content,
+.container .child-tab .sub-content{
+  max-height: 0px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 0 0 3px 3px;
+  transition: all 0.4s ease;
+}
+.parent-tab input:checked ~ .content,
+.child-tab input:checked ~ .sub-content{
+  max-height: 100vh;
+}
+.tab-3 input:checked ~ .content{
+  padding: 15px 20px;
+}
+.parent-tab .content p,
+.child-tab .sub-content p{
+  padding: 15px 20px;
+  font-size: 16px;
+}
+.child-tab .sub-content p{
+  font-size: 15px;
+}
+input[type="radio"],
+input[type="checkbox"]{
+  display: none;
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- <section>
+	
+<div class="container">
+	
+<div class="parent-tab">
+	<label for="">
+		<span>accordion one</span>
+	</label>
+	<div class="content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+
+<div class="parent-tab">
+	<label for="">
+		<span>accordion two</span>
+	</label>
+	<div class="content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+
+<div class="parent-tab">
+	<label for="">
+		<span>accordion three</span>
+	</label>
+	<div class="content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+
+<div class="parent-tab">
+	<label for="">
+		<span>accordion four</span>
+	</label>
+	<div class="content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+
+<div class="parent-tab">
+	<label for="">
+		<span>accordion five</span>
+	</label>
+	<div class="content">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	</div>
+</div>
+
+</div>
+
+</section> -->
+<body>
+  <div class="container">
+    <!-- Accordion Heading One -->
+    <div class="parent-tab">
+      <input type="radio" name="tab" id="tab-1" checked>
+      <label for="tab-1">
+        <span>Accordion Heading One</span>
+        <div class="icon"><i class="fas fa-plus"></i></div>
+      </label>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing thelit. Quam, repellendus facere, id porro magnam blanditiiss quoteos dolores ratione quidem ipsam esse quos pariatur, repellat obcaecati!</p>
+      </div>
+    </div>
+
+    <!-- Accordion Heading Two -->
+    <div class="parent-tab">
+      <input type="radio" name="tab" id="tab-2">
+      <label for="tab-2">
+        <span>Accordion Heading Two</span>
+        <div class="icon"><i class="fas fa-plus"></i></div>
+      </label>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing thelit. Quam, repellendus facere, id porro magnam blanditiiss quoteos dolores ratione quidem ipsam esse quos pariatur, repellat obcaecati!</p>
+      </div>
+    </div>
+
+    <!-- Accordion Heading Four -->
+    <div class="parent-tab">
+      <input type="radio" name="tab" id="tab-6">
+      <label for="tab-6">
+        <span>Accordion Heading Four</span>
+        <div class="icon"><i class="fas fa-plus"></i></div>
+      </label>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing thelit. Quam, repellendus facere, id porro magnam blanditiiss quoteos dolores ratione quidem ipsam esse quos pariatur, repellat obcaecati!</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

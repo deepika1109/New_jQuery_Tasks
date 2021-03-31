@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title> 
+		HTML DOM Input Text Placeholder Property
+	</title> 
+</head> 
+
+<body style="text-align:center;"> 
+
+	<!-- <h1>GeeksForGeeks</h1> 
+
+	<h2>DOM Input Text placeholder Property</h2> 
+
+	<input type="text" id="text_id" placeholder="GeeksForGeeks"> 
+
+	<br><br>
+	
+	<button onclick="myGeeks()">Click Here!</button> 
+	
+	<p id="GFG" style="font-size:25px;"></p> -->
+
+	
+	<!-- script to return the placeholder Property-->
+	<!-- <script> 
+		function myGeeks() { 
+			var txt = document.getElementById("text_id").placeholder;
+			document.getElementById("GFG").innerHTML = txt; 
+		} 
+	</script> 
+ -->
+
+<h1>GeeksForGeeks</h1> 
+ 
+    <h2>DOM Input Text placeholder Property</h2> 
+ 
+    <input type="text" id="text_id" placeholder="Write your name"> 
+ 
+    <br><br>
+     
+    <button onclick="myGeeks()">Click Here!</button> 
+     
+    <p id="GFG" style="font-size:20px;"></p>
+  
+     
+    <!-- script to set the placeholder Property-->
+    <script> 
+        function myGeeks() { 
+            var txt = document.getElementById("text_id").placeholder
+                    = "";
+                     
+            document.getElementById("GFG").innerHTML
+                    = txt; 
+        } 
+    </script> 
+
+</body> 
+</html>				 

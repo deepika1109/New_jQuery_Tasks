@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>show it one time
+	</title>
+
+<style type="text/css">
+	*{
+		padding: 0;
+		margin:0;
+	}
+
+	body{
+		height: 100vh;
+	}
+
+	#bluebg{
+		background-color: #010e94;
+		height:50vh;
+		display: flex;
+    	align-items: center;
+    	justify-content: center;
+	}
+
+ 	#bluebg .text{
+ 		font-size: 40px;
+ 		color: #fff;
+ 	}
+
+</style>
+
+</head>
+<body>
+
+ <div id="bluebg">
+<h1 class="text">Hello</h1>
+ </div>
+
+</body>
+
+<script type='text/javascript'>
+
+(function() {
+	if(localStorage.getItem('isVisited')){
+        document.getElementById('bluebg').style.display = "none"
+	}else{
+		document.getElementById('bluebg').style.display = "flex"
+		localStorage.setItem('isVisited','true');
+	}
+})();
+  
+
+</script>
+
+</html>
