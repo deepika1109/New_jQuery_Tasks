@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="">
+</head>
+
+<style>
+  body {
+    font-family: sans-serif;
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+    cursor: none;
+  }
+
+  .cursor {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+    top: 0;
+    left: 0;
+    background-color: white;
+  }
+
+  .cursor-lazy {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: absolute;
+    transform: translate3d(-50%, -50%, 0);
+    top: 0;
+    left: 0;
+    transition: 0.1s ease-out;
+  }
+
+</style>
+
+<body>
+
+  <div class="cursor"></div>
+  <div class="cursor-lazy"></div>
+
+  <script>
+    (function() {
+      var cursor = document.querySelector('.cursor');
+      var cursorLazy = document.querySelector('.cursor-lazy');
+      var links = document.querySelectorAll('a');
+
+      var editCursor = function editCursor(event) {
+        cursor.style.left = event.clientX + 'px';
+        cursor.style.top = event.clientY + 'px';
+        cursorLazy.style.left = event.clientX + 'px';
+        cursorLazy.style.top = event.clientY + 'px';
+      };
+
+      window.addEventListener('mousemove', editCursor);
+    })();
+
+  </script>
+</body>
+
+</html>

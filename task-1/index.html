@@ -7,6 +7,88 @@
   <title></title>
   <link rel="stylesheet" href="style/style.css">
   <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+<style type="text/css">
+  
+.column2 {
+    margin-left: 0;
+}
+
+.col-3 {
+    width: 220px;
+}
+
+.column2 .module {
+    display: inline-block;
+    width: 100%;
+}
+
+.module {
+    padding-bottom: 24px;
+}
+
+header.module-header {
+    background: none;
+    height: auto;
+    padding: 0 0 2px;
+    margin-bottom: 18px;
+    display: block;
+}
+
+header.module-header h4{
+    border-bottom: 1px solid #ff8000;
+    color: #333;
+    font-family: knowledge-light,helvetica,arial,sans-serif;
+    font-weight: 300;
+    font-size: 2.1em;
+    line-height: 1.2em;
+    margin: 0;
+    padding-bottom: 2px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+header.module-header h4 a {
+    background-position: right -275px;
+    background: url(//s4.reutersmedia.net/resources_v2/images/sprites-arrows.png) right -217px no-repeat;
+    background-size: 160px auto;
+    display: block;
+    cursor: pointer;
+}
+
+.news-mod-wire .module-content {
+    background: #f5f5f5;
+    position: relative;
+}
+
+.news-mod-wire .module-container-wire {
+    overflow: hidden;
+    padding: 14px 0;
+    height: 400px;
+}
+
+.mCustomScrollBox {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: 0;
+    direction: ltr;
+}
+
+.mCSB_container {
+    overflow: hidden;
+    width: auto;
+    height: auto;
+}
+
+.news-mod-wire .module-container-wire li:first-child {
+    padding: 0 0 18px 0;
+}
+
+
+</style>
+
 </head>
 
 <body>
@@ -38,6 +120,196 @@
     </div>
 
   </section>
+
+
+  <div class="column2 col col-3">
+    <section id="hp-wire" class="module news-mod-wire hp-module ">
+    
+    <header class="module-header">
+        <h4 class="module-heading">
+          <a href="/theWire">
+          THE <span class="title-last">WIRE</span>
+          </a></h4>
+                </header>
+    <section class="module-content">
+    <ul class="module-container-wire wire-container mCustomScrollbar _mCS_1" data-ajax-url="/assets/jsonWireNews" data-ajax-data="{&quot;limit&quot;:20}" data-ajax-callback="drawWireNews" data-loadonready="false" data-autorefresh="true" data-refreshfrequency="60" aria-live="polite" aria-relevant="additions" style="height: 394px;"><div id="mCSB_1" class="mCustomScrollBox mCS-dark mCSB_vertical mCSB_inside" style="max-height: none;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container" style="position: relative; top: 0px; left: 0px;" dir="ltr">
+  <li class="article USKBN2BP0S4">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617363907000">13m ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-china-indonesia-ev/indonesia-says-china-consortium-to-invest-5-billion-in-electric-battery-venture-idUSKBN2BP0S4?il=0">Indonesia says China consortium to invest $5 billion in electric battery venture</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0RL">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617363588000">19m ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-mozambique-insurgency/mozambique-army-says-total-project-protected-after-militant-attack-idUSKBN2BP0RL?il=0">Mozambique army says Total project protected after militant attack</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0RD">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617363106000">27m ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-spain-politics-attack/fire-bomb-attack-on-spanish-leftist-partys-office-idUSKBN2BP0RD?il=0">Fire bomb attack on Spanish leftist party's office</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0JY">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617362738000">33m ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-singapore-oil-hinleong/the-hunt-for-lost-billions-failed-hin-leongs-owners-face-asset-claims-idUSKBN2BP0JY?il=0">The hunt for lost billions: Failed Hin Leong's owners face asset claims</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0QY">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617362261000">41m ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-iran-nuclear-vienna/iran-world-powers-to-hold-nuclear-talks-in-vienna-on-tuesday-idUSKBN2BP0QY?il=0">Iran, world powers to hold nuclear talks in Vienna on Tuesday</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0MA">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617361711000">50m ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-health-ebola-guinea/guinea-medics-track-suspected-ebola-cluster-after-one-case-confirmed-idUSKBN2BP0MA?il=0">Guinea medics track suspected Ebola cluster after one case confirmed</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0NJ">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617360873000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-usa-stocks-weekahead/wall-street-weekahead-high-flying-market-to-take-cues-from-infrastructure-plans-upcoming-earnings-idUSKBN2BP0NJ?il=0">Wall Street Weekahead: High-flying market to take cues from infrastructure plans, upcoming earnings</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0O6">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617360691000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-ukraine-crisis-russia-kremlin/kremlin-says-that-any-nato-troop-deployment-to-ukraine-would-raise-tensions-idUSKBN2BP0O6?il=0">Kremlin says that any NATO troop deployment to Ukraine would raise tensions</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP09L">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617360453000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-usa-economy/robust-u-s-employment-growth-expected-in-march-jobs-deficit-remains-large-idUSKBN2BP09L?il=0">Robust U.S. employment growth expected in March, jobs deficit remains large</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BO6OA">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617360364000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-lebanon-crisis-port-exclusive/exclusive-germany-to-propose-beirut-port-reconstruction-with-strings-attached-sources-idUSKBN2BO6OA?il=0">Exclusive-Germany to propose Beirut port reconstruction with 'strings attached' - sources</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0N1">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617360277000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-usa-georgia-voting-companies-analysis/analysis-millennials-and-global-consumers-push-u-s-companies-to-get-political-idUSKBN2BP0N1?il=0">Analysis: Millennials and global consumers push U.S. companies to get political</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP07P">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617360226000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-taiwan-train/train-crash-kills-48-in-taiwans-deadliest-rail-tragedy-for-decades-idUSKBN2BP07P?il=0">Train crash kills 48 in Taiwan's deadliest rail tragedy for decades</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0OQ">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617360226000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-taiwan-train-crashes-factbox/factbox-taiwans-worst-train-accidents-idUSKBN2BP0OQ?il=0">Factbox: Taiwan's worst train accidents</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0OD">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617359771000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-health-coronavirus-pope-vaccinations/pope-makes-surprise-visit-to-homeless-getting-covid-19-vaccine-in-vatican-idUSKBN2BP0OD?il=0">Pope makes surprise visit to homeless getting COVID-19 vaccine in Vatican</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0LN">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617359549000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-myanmar-politics-thailand-analysis/analysis-myanmars-neighbour-thailand-unlikely-to-toughen-stance-on-coup-idUSKBN2BP0LN?il=0">Analysis: Myanmar's neighbour Thailand unlikely to toughen stance on coup</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP06T">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617359509000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-myanmar-politics/myanmar-protesters-vow-to-keep-up-action-as-internet-blackout-widens-idUSKBN2BP06T?il=0">Myanmar protesters vow to keep up action as internet blackout widens</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0NZ">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617359315000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-russia-politics-social-media-fines/russian-court-fines-twitter-over-failure-to-delete-content-idUSKBN2BP0NZ?il=0">Russian court fines Twitter over failure to delete content</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0NP">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617359052000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-iran-nuclear-russia/russia-says-iran-world-power-talks-over-appear-on-right-track-idUSKBN2BP0NP?il=0">Russia says Iran, world power talks over, appear on right track</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0KU">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617358773000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-europe-fighter/airbus-and-dassault-reach-tentative-deal-on-fcas-fighter-source-says-idUSKBN2BP0KU?il=0">Airbus and Dassault reach tentative deal on FCAS fighter, source says</a>
+  </h3>
+        </li>
+      <li class="article USKBN2BP0NE">
+          <time class="article-time">
+            <span class="ico ico-time"></span>
+            <span class="timestamp" data-time="1617358481000">1h ago</span>
+          </time>
+          <h3 class="article-heading"><a href="/article/us-russia-politics-navalny-tenders/russia-seeks-to-buy-anti-riot-gear-ahead-of-planned-navalny-protest-idUSKBN2BP0NE?il=0">Russia seeks to buy anti-riot gear ahead of planned Navalny protest</a>
+  </h3>
+        </li>
+      </div><div id="mCSB_1_scrollbar_vertical" class="mCSB_scrollTools mCSB_1_scrollbar mCS-dark mCSB_scrollTools_vertical" style="display: block;"><div class="mCSB_draggerContainer"><div id="mCSB_1_dragger_vertical" class="mCSB_dragger" style="position: absolute; min-height: 30px; display: block; height: 77px; max-height: 384px; top: 0px;" oncontextmenu="return false;"><div class="mCSB_dragger_bar" style="line-height: 30px;"></div></div><div class="mCSB_draggerRail"></div></div></div></div></ul>
+<div class="wire-fade-out"></div>
+
+<div class="load-more-link load-more-wire wire-container">
+</div>
+
+</section>
+    </section>
+
+</div>
+
+
+<script type="text/javascript" src="https://s2.reutersmedia.net/resources_v2/js/rcom-wire.js"></script>
+<script type="text/javascript">
+  Reuters.rcom.wire.lessThanHourFormat = '%dm ago';
+  Reuters.rcom.wire.lessThanDayFormat = '%dh ago';
+</script>
 
   <script>
     
